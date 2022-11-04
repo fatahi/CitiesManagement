@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ChallengeAPI</name>
+    </assembly>
+    <members>
+        <member name="M:Challenge.Presentation.Api.Controllers.Media.UploadController.FileUpload(Microsoft.AspNetCore.Http.IFormFile,System.Int32)">
+            <summary>
+              Single File Upload Service
+            </summary>
+            <param name="photo"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Challenge.Presentation.Api.Controllers.Media.UploadController.FilesUpload(Microsoft.AspNetCore.Http.IFormFile[],System.Int32)">
+            <summary>
+            Multi File Upload Service
+            </summary>
+            <param name="photos"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

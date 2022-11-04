@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Challenge.Domain.Mapper\Challenge.Domain.Mapper.csproj" />
+    <ProjectReference Include="..\Challenge.Domain\Challenge.Domain.csproj" />
+    <ProjectReference Include="..\Challenge.Application.Contracts\Challenge.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
