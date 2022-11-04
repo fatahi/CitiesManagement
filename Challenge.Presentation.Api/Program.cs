@@ -21,19 +21,10 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-//try
-//{
-    //var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
     var builder = WebApplication.CreateBuilder(args);
     IWebHostEnvironment env = builder.Environment;
 
-    //var config = new MapperConfiguration(cfg =>
-    //{
-    //    cfg.AddProfile(new AutoMapping());
-    //});
-    //var mapper = config.CreateMapper();
-    //​
-    //builder.Services.AddSingleton(mapper);
     builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
     #region Cors
@@ -64,7 +55,7 @@ using System.Threading.Tasks;
     services.AddControllers();
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     services.AddEndpointsApiExplorer();
-//services.AddSwaggerGen();
+
 
 
 builder.Services.AddCors(option =>
@@ -98,11 +89,6 @@ services.AddApiVersioning(opt =>
     // Configure the HTTP request pipeline.
     var apiVersionDescriptionProvider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
 
-    // Configure the HTTP request pipeline.
-    //app.MapWhen(ctx => ctx.Request.Path.Value.StartsWith("/api"), builder =>
-    //{
-    //    builder.UseStatusCodePagesWithReExecute("/api/error/{0}");
-    //});
 
     if (app.Environment.IsDevelopment())
     {
@@ -132,12 +118,4 @@ app.UseAuthentication();
     app.MapControllers();
 
     app.Run();
-//}
-//catch (Exception ex)
-//{
-//    throw;
-//}
-//finally
-//{
 
-//}
